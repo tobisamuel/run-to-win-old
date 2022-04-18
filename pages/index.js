@@ -1,7 +1,7 @@
-import Layout from "../components/layout";
 import Link from "next/link";
 import Image from "next/image";
 import Card from "../components/card";
+import Layout from "../components/layout";
 
 const plans = [{ name: "", price: "", description: "", content: {} }];
 
