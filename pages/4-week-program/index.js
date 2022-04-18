@@ -21,13 +21,15 @@ const FourWeek = () => {
       lastName: Yup.string()
         .max(20, "Must be 20 characters or less")
         .required("Required"),
-      email: Yup.string().email("Invalid Email Address").required("Required"),
+      email: Yup.string()
+        .email("Enter a valid Email Address")
+        .required("Required"),
       phoneNumber: Yup.string()
         .matches(
-          /^([0]{1}|\+?[234]{3})([7-9]{1})([0|1]{1})([\d]{1})([\d]{7})$/g,
-          "Invalid phone number"
+          /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,7}$/gm,
+          "Enter a valid Phone Number"
         )
-        .required("Phone number is required"),
+        .required("Phone Number is required"),
     }),
     onSubmit: async (values) => {
       try {
