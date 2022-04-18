@@ -18,14 +18,15 @@ const Card = () => {
         </h4>
 
         <p className="text-sm text-left my-3">
-          A 4-week starter program on paradigm shift on fitness and wellness and
-          learn how to build habits that would ensure fitness and wellness
+          A 4-week starter program on fitness and wellness. Learn how to build
+          habits that would ensure sustainable fitness and ultimately become the
+          best version of you.
         </p>
         <h4 className="text-2xl text-left text-amber-500 font-normal">
           &#8358;5,000
         </h4>
         <div className="flex my-4">
-          <Link href="/">
+          <Link href="/4-week-program">
             <a className="px-5 py-2 rounded-md w-full inline-block text-center bg-fuchsia-600 font-medium text-white hover:bg-fuchsia-700">
               Join Now
             </a>
