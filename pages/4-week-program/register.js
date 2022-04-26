@@ -1,11 +1,13 @@
+import { useRouter } from "next/router";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { db } from "../../firebase";
 import { addDoc, collection } from "firebase/firestore";
+import { PaystackButton } from "react-paystack";
 import Layout from "../../components/layout";
 
 const Register = () => {
-  const userCollectionRef = collection(db, "users");
+  const router = useRouter();
 
   const formik = useFormik({
     initialValues: {
@@ -31,18 +33,70 @@ const Register = () => {
         )
         .required("Phone Number is required"),
     }),
-    onSubmit: async (values) => {
-      try {
-        await addDoc(userCollectionRef, values);
+    onSubmit: () => {},
+  });
 
-        document.location.assign(
-          "https://paystack.com/pay/4-week-starter-program"
-        );
+  const verifyTransaction = async (reference) => {
+    fetch(`/api/verify?ref=${reference}`, {
+      method: "GET",
+    }).then((response) => response.json());
+  };
+
+  const sendMail = async () => {
+    const options = {
+      method: "POST",
+      body: formik.values.email,
+    };
+    try {
+      await fetch("/api/email", options);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const userCollectionRef = collection(db, "users");
+
+  const publicKey = "pk_live_16c42edaad40461d756ec2efc29212ca3cfb6e86";
+
+  const amount = 5000 * 100;
+
+  const componentProps = {
+    email: formik.values.email,
+    amount,
+    metadata: {
+      first_name: formik.values.firstName,
+      last_name: formik.values.lastName,
+      phone: formik.values.phoneNumber,
+    },
+    publicKey,
+    text: "Proceed to checkout",
+    onSuccess: async (ref) => {
+      const { reference } = ref;
+      try {
+        // verification
+        await verifyTransaction(reference);
+
+        // firebase
+        await addDoc(userCollectionRef, formik.values);
+
+        // email
+        sendMail();
+
+        formik.resetForm();
+
+        // redirect
+        router.push({
+          pathname: "/4-week-program/success",
+          query: { ref: reference },
+        });
       } catch (error) {
-        alert(error.message);
+        console.log(error);
       }
     },
-  });
+    onClose: () => {
+      return null;
+    },
+  };
 
   return (
     <Layout>
@@ -126,18 +180,15 @@ const Register = () => {
               ) : null}
             </div>
 
-            <button
+            <PaystackButton
               type="submit"
-              className="w-full px-6 py-2.5 bg-fuchsia-600 text-white text-sm font-medium leading-tight uppercase rounded shadow-md hover:bg-fuchsia-700 hover:shadow-lg focus:bg-fuchsia-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-fuchsia-800 active:shadow-lg transition duration-150 ease-in-out"
-              disabled={formik.isSubmitting}
-            >
-              Proceed to checkout
-            </button>
+              {...componentProps}
+              className="w-full px-6 py-2.5 bg-fuchsia-600 text-white text-sm text-center font-medium leading-tight uppercase rounded shadow-md hover:bg-fuchsia-700 hover:shadow-lg focus:bg-fuchsia-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-fuchsia-800 active:shadow-lg transition duration-150 ease-in-out"
+            />
           </form>
         </div>
       </div>
     </Layout>
   );
 };
-
 export default Register;

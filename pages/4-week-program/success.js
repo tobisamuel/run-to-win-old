@@ -11,7 +11,7 @@ const Success = () => {
           Payment Successful!
         </span>
         <span className="text-fuchsia-600 text-sm font-semibold">
-          Your payment reference is {router.query.reference}
+          Your payment reference is {router.query.ref}
         </span>
         <span className="mt-1 text-xs text-fuchsia-600">
           You will be added to the Run2Win WhatsApp Group Chat

@@ -13,7 +13,7 @@ const Card = () => {
   return (
     <div className="w-auto bg-gray-200 rounded-md overflow-hidden md:w-1/2">
       <div className="p-6">
-        <h4 className="text-lg text-left text-fuchsia-800 font-bold">
+        <h4 className="text-lg text-left text-fuchsia-700 font-bold">
           4-week Starter Program
         </h4>
 
