@@ -56,9 +56,9 @@ const Register = () => {
 
   const userCollectionRef = collection(db, "users");
 
-  const publicKey = "pk_live_16c42edaad40461d756ec2efc29212ca3cfb6e86";
-
   const amount = 5000 * 100;
+
+  const publicKey = "pk_live_16c42edaad40461d756ec2efc29212ca3cfb6e86";
 
   const componentProps = {
     email: formik.values.email,
@@ -82,6 +82,7 @@ const Register = () => {
         // email
         sendMail();
 
+        //clear fields
         formik.resetForm();
 
         // redirect
