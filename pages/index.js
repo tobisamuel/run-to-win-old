@@ -10,7 +10,7 @@ export default function Home() {
     <Layout>
       {/* Main Section */}
       <section>
-        <div className="flex flex-col-reverse items-center mx-auto mt-12 px-16 md:flex-row">
+        <div className="flex flex-col-reverse items-center mx-auto mt-12 px-10 md:flex-row md:px-16">
           {/* left side */}
           <div className="basis-1/2 flex flex-col space-y-4 py-6 md:py-0">
             <h1 className="text-2xl uppercase font-extrabold text-fuchsia-600 text-center md:px-0 md:text-3xl md:text-left">
@@ -39,7 +39,7 @@ export default function Home() {
 
       {/* About Section */}
       <section>
-        <div className="flex justify-between flex-col items-center mt-16 mx-auto px-16 md:flex-row">
+        <div className="flex justify-between flex-col items-center mt-16 mx-auto px-10 md:flex-row md:px-16">
           {/* left side */}
           <div className="flex-1">
             <Image src="/images/hero.png" width={600} height={428} alt="" />
@@ -70,7 +70,7 @@ export default function Home() {
 
       {/* Programs Section */}
       <section>
-        <div className="max-w-4xl mt-12 mx-auto px-10 text-center">
+        <div className="max-w-4xl mt-12 mx-auto px-10 text-center md:px-16">
           <h2 className="text-fuchsia-600 text-2xl text-center font-extrabold">
             Our Programs
           </h2>
@@ -87,7 +87,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section>
-        <div className="flex flex-col justify-between items-center bg-fuchsia-600 mx-auto mt-12 px-10 py-24 md:flex-row ">
+        <div className="flex flex-col justify-between items-center bg-fuchsia-600 mx-auto mt-12 px-10 py-24 md:flex-row md:px-16">
           <h3 className="font-bold text-xl text-white text-center md:text-2xl md:text-left">
             Begin the journey to becoming the best version of you
           </h3>
