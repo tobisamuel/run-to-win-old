@@ -10,9 +10,9 @@ export default function Home() {
     <Layout>
       {/* Main Section */}
       <section>
-        <div className=" flex flex-col-reverse items-center mx-auto mt-12 px-16 md:flex-row">
+        <div className="flex flex-col-reverse items-center mx-auto mt-12 px-16 md:flex-row">
           {/* left side */}
-          <div className="flex-1 flex flex-col space-y-4 py-6">
+          <div className="basis-1/2 flex flex-col space-y-4 py-6 md:py-0">
             <h1 className="text-2xl uppercase font-extrabold text-fuchsia-600 text-center md:px-0 md:text-3xl md:text-left">
               A Transformational, Revolutionary and Holistic Fitness and
               Wellness Program designed for Christian Women
@@ -31,7 +31,7 @@ export default function Home() {
           </div>
 
           {/* right side */}
-          <div className="flex-1">
+          <div className="basis-1/2">
             <Image src="/images/section.png" width={600} height={400} alt="" />
           </div>
         </div>
@@ -39,14 +39,14 @@ export default function Home() {
 
       {/* About Section */}
       <section>
-        <div className="flex justify-between flex-col items-center mt-16 mx-auto  px-16 md:flex-row">
+        <div className="flex justify-between flex-col items-center mt-16 mx-auto px-16 md:flex-row">
           {/* left side */}
           <div className="flex-1">
             <Image src="/images/hero.png" width={600} height={428} alt="" />
           </div>
 
           {/* right side */}
-          <div className="flex-1 flex flex-col space-y-4 my-14 text-center md:ml-7 md:text-left">
+          <div className="flex-1 flex flex-col space-y-4 my-14 text-center md:my-0 md:text-left">
             <h3 className="text-fuchsia-500 font-semibold">ABOUT US</h3>
             <h2 className="text-3xl font-extrabold uppercase text-fuchsia-600 md:text-2xl ">
               Building habits for sustainable fitness and wellness

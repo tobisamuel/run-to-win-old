@@ -25,14 +25,14 @@ export default function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <nav className="relative mx-auto px-10 shadow-sm md:px-16">
-        <div className="flex items-center justify-between">
+      <nav className="relative mx-auto px-10 py-8 shadow-sm md:px-16">
+        <div className="flex items-center justify-between ">
           <Link href="/">
             <a>
               <Image
                 src="/images/logo.png"
-                width={141}
-                height={100}
+                width={130}
+                height={33}
                 alt="logo"
               />
             </a>
