@@ -48,7 +48,7 @@ export default function Layout({ children }) {
 
           {/* NavLinks */}
           <div className="hidden font-bold text-fuchsia-600 space-x-5 md:flex">
-            <Link href="/">
+            <Link href="/about">
               <a>About</a>
             </Link>
             <Link href="/">
@@ -85,7 +85,7 @@ export default function Layout({ children }) {
       <footer>
         <div>
           <div className="flex justify-center text-fuchsia-500 font-bold space-x-5 mt-10">
-            <Link href="/">
+            <Link href="/about">
               <a>About</a>
             </Link>
             <Link href="/">

@@ -58,7 +58,7 @@ export default function Home() {
               ultimately the best version of yourself.
             </p>
             <div className="flex justify-center md:justify-start">
-              <Link href="/">
+              <Link href="/about">
                 <a className="px-5 py-2 rounded-md inline-block text-center bg-fuchsia-600 font-medium text-white hover:bg-fuchsia-700">
                   Learn More
                 </a>
@@ -79,7 +79,7 @@ export default function Home() {
           </h4>
           {/* Cards Container */}
 
-          <div className="flex flex-col justify-center mt-10 space-y-8 md:flex-row md:space-x-5">
+          <div className="flex flex-col justify-center mt-10 space-y-8 md:flex-row md:space-x-5 lg">
             <Card />
           </div>
         </div>
@@ -87,13 +87,13 @@ export default function Home() {
 
       {/* CTA Section */}
       <section>
-        <div className="flex flex-col justify-between items-center bg-fuchsia-600 mx-auto mt-12 px-10 py-24 md:flex-row md:px-16">
+        <div className="flex flex-col justify-between items-center bg-fuchsia-600 mx-auto mt-12 px-10 py-24 lg:flex-row md:px-16">
           <h3 className="font-bold text-xl text-white text-center md:text-2xl md:text-left">
             Begin the journey to becoming the best version of you
           </h3>
           <div>
             <Link href="/">
-              <a className="mt-5 px-5 py-2 rounded-md inline-block text-center bg-white font-medium text-fuchsia-600 md:mt-0">
+              <a className="mt-5 px-5 py-2 rounded-md inline-block text-center bg-white font-medium text-fuchsia-600 lg:mt-0">
                 Get Started
               </a>
             </Link>
