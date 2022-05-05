@@ -64,7 +64,7 @@ export default function Layout({ children }) {
         <div className="md:hidden">
           {show ? (
             <div className="absolute flex flex-col items-center self-end w-11/12 left-0 right-0 top-20 mx-auto mt-10 py-8 px-6 space-y-6 z-50 bg-white text-fuchsia-600 font-bold drop-shadow-md sm:self-center">
-              <Link href="/">
+              <Link href="/about">
                 <a>About</a>
               </Link>
               <Link href="/">

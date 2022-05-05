@@ -9,7 +9,7 @@ const values = [
   },
   {
     name: "Focus",
-    description: `Life is full of distractions. Our ability to focus on the most important things of life without distractions is what makes the difference. At Run2Win, we ask our clients to identify the most important things of their lives and gave them laser focus.`,
+    description: `Life is full of distractions. Our ability to focus on the most important things of life without distractions is what makes the difference. At Run2Win, we ask our clients to identify the most important things of their lives and give them laser focus.`,
   },
   {
     name: "Discipline",
