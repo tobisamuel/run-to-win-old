@@ -10,16 +10,16 @@ export default function Home() {
     <Layout>
       {/* Main Section */}
       <section>
-        <div className="flex flex-col-reverse items-center mx-auto mt-12 px-10 md:flex-row md:px-16">
+        <div className="flex flex-col-reverse items-center mt-12 mx-auto px-10 md:px-16 md:flex-row md:items-start">
           {/* left side */}
-          <div className="basis-1/2 flex flex-col space-y-4 py-6 md:py-0">
-            <h1 className="text-2xl uppercase font-extrabold text-fuchsia-600 text-center md:px-0 md:text-3xl md:text-left">
-              A Transformational, Revolutionary and Holistic Fitness and
-              Wellness Program designed for Christian Women
+          <div className="basis-1/2 flex flex-col mb-3 py-6 space-y-4 text-center md:text-left">
+            <h1 className="text-3xl font-extrabold uppercase text-fuchsia-600 md:text-4xl lg:text-5xl">
+              Building habits for sustainable fitness and wellness
             </h1>
-            <p className="text-center text-rtw-4 md:text-left">
-              A program designed for Christian Women who desire fitness and
-              wellness of their spirit, soul and body.
+            <p className="text-md text-rtw-4 md:text-lg lg:text-xl">
+              We work with individuals and organizations in building habits for
+              sustainable Fitness and Wellness through regular physical exercise
+              and proper nutrition.
             </p>
             <div className="flex justify-center md:justify-start">
               <Link href="/">
@@ -39,7 +39,7 @@ export default function Home() {
 
       {/* About Section */}
       <section>
-        <div className="flex justify-between flex-col items-center mt-16 mx-auto px-10 md:flex-row md:px-16">
+        <div className="flex justify-between flex-col items-center mt-12 mx-auto px-10 md:flex-row md:px-16">
           {/* left side */}
           <div className="flex-1">
             <Image src="/images/hero.png" width={600} height={428} alt="" />
@@ -48,10 +48,10 @@ export default function Home() {
           {/* right side */}
           <div className="flex-1 flex flex-col space-y-4 my-14 text-center md:my-0 md:text-left">
             <h3 className="text-fuchsia-500 font-semibold">ABOUT US</h3>
-            <h2 className="text-3xl font-extrabold uppercase text-fuchsia-600 md:text-2xl ">
-              Building habits for sustainable fitness and wellness
+            <h2 className="text-2xl font-extrabold uppercase text-fuchsia-600 md:text-3xl">
+              Becoming the best version of yourself
             </h2>
-            <p className="text-rtw-4">
+            <p className="text-rtw-4 lg:text-lg">
               At Run2Win, we believe that fitness is much more than the number
               on the scale. It is not about perfection but consistency; It is
               not about being skinny but about being fit, healthy, strong and

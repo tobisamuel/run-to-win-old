@@ -24,11 +24,11 @@ const values = [
 const AboutPage = () => {
   return (
     <Layout>
-      <div className="flex flex-col items-center mt-16 mx-auto px-10 md:px-16 md:flex-row md:items-start">
+      <div className="flex flex-col items-center mt-12 mx-auto px-10 md:px-16 md:flex-row">
         {/* left side */}
         <div className="basis-1/2 flex flex-col space-y-4 mb-3 text-center md:text-left">
-          <h2 className="text-3xl font-extrabold uppercase text-fuchsia-600">
-            Building habits for sustainable fitness and wellness
+          <h2 className="text-4xl font-extrabold uppercase text-fuchsia-600">
+            Becoming the best version of yourself
           </h2>
           <p className="text-base text-rtw-4">
             At Run2Win, we believe that fitness is much more than the number on
