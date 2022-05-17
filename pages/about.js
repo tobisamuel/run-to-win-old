@@ -87,10 +87,9 @@ const AboutPage = () => {
             best version of themselves. She believes Fitness and wellness is not
             just about the number on the scale but encompasses fitness of our
             spirit, soul and body. This conviction led to the birth of Run2Win
-            Fitness and Wellness - a transformational and holistic Fitness
-            program specifically designed for women who desire fitness and
-            wellness of spirit, soul and body. She is mother to two young
-            adults, aged 23 and 21.
+            Fitness and Wellness - an organisation that helps individuals and
+            organisations build habits for sustainable Fitness and Wellness. She
+            is mother to two young adults, aged 23 and 21.
           </p>
         </div>
       </div>
