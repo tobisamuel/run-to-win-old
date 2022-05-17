@@ -20,7 +20,7 @@ export default function Layout({ children }) {
         <title>Run to Win Fitness</title>
         <meta
           name="description"
-          content="Run2Win Fitness and Wellness is a transformational, revolutionary, holistic Fitness and Wellness program specifically designed for Christian Women who desire Fitness and Wellness of their spirit, soul and body"
+          content="Run2Win Fitness and Wellness is a organisation that work with individuals and organisations in building habits for sustainable Fitness and Wellness through regular physical exercise and proper nutrition."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
