@@ -3,7 +3,35 @@ import Image from "next/image";
 import Card from "../components/card";
 import Layout from "../components/layout";
 
-const plans = [{ name: "", price: "", description: "", content: {} }];
+const cardDetails = [
+  {
+    title: "4-week Starter Program",
+    description:
+      "A 4-week starter program on fitness and wellness. Learn how to build habits that would ensure sustainable fitness and ultimately become the best version of you.",
+    price: "5,000",
+    href: "/4-week-program/register",
+    features: [
+      "At home strength training workout videos",
+      "Cardio Plan for non-strength days",
+      "Daily Scriptures / Motivational Quotes",
+      "Guides to healthy eating",
+      "Weekly Planner for busy women",
+    ],
+  },
+  {
+    title: "30-day Endurance Challenge",
+    description:
+      "Build cardiovascular strength, endurance and mental toughness in the 30-day challenge.",
+    price: "3,000",
+    href: "/endurance-challenge/register",
+    features: [
+      "Free webinar on Mental Toughness",
+      "Weekly no equipment bodyweight workout routine you can do anywhere (indoor or outdoor)",
+      "Daily endurance quotes to build mental toughness and keep you motivated",
+      "Healthy Nutrition Tips + Accountability",
+    ],
+  },
+];
 
 export default function Home() {
   return (
@@ -79,8 +107,10 @@ export default function Home() {
           </h4>
           {/* Cards Container */}
 
-          <div className="flex flex-col justify-center mt-10 space-y-8 md:flex-row md:space-x-5 lg">
-            <Card />
+          <div className="flex flex-col justify-center mt-10 space-y-8 md:flex-row md:space-x-5 md:space-y-0">
+            {cardDetails.map((detail, i) => (
+              <Card details={detail} key={i} />
+            ))}
           </div>
         </div>
       </section>
