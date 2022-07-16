@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import { db } from "../../../firebase";
 import { addDoc, collection } from "firebase/firestore";
 import { PaystackButton } from "react-paystack";
-import Layout from "../../../components/layout";
+import { Layout } from "../../../components";
 
 const Register = () => {
   const router = useRouter();

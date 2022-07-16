@@ -1,5 +1,4 @@
-import Layout from "../../components/layout";
-import Card from "../../components/card";
+import { Card, Layout } from "../../../components";
 
 const details = {
   title: "30-day Endurance Challenge",
