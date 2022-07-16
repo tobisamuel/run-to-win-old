@@ -1,12 +1,11 @@
-import Layout from "../../components/layout";
-import Card from "../../components/card";
+import { Card, Layout } from "../../../components";
 
 const details = {
   title: "4-week Starter Program",
   description:
     "A 4-week starter program on fitness and wellness. Learn how to build habits that would ensure sustainable fitness and ultimately become the best version of you.",
   price: "5,000",
-  href: "/4-week-program/register",
+  href: "/programs/4-week-program/register",
   features: [
     "At home strength training workout videos",
     "Cardio Plan for non-strength days",

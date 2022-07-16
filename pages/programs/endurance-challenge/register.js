@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { db } from "../../firebase";
+import { db } from "../../../firebase";
 import { addDoc, collection } from "firebase/firestore";
 import { PaystackButton } from "react-paystack";
-import Layout from "../../components/layout";
+import Layout from "../../../components/layout";
 
 const Register = () => {
   const router = useRouter();
@@ -56,7 +56,7 @@ const Register = () => {
 
   const userCollectionRef = collection(db, "users");
 
-  const amount = 5000 * 100;
+  const amount = 3000 * 100;
 
   const publicKey = "pk_live_16c42edaad40461d756ec2efc29212ca3cfb6e86";
 
@@ -87,7 +87,7 @@ const Register = () => {
 
         // redirect
         router.push({
-          pathname: "/4-week-program/success",
+          pathname: "/endurance-challenge/success",
           query: { ref: reference },
         });
       } catch (error) {
@@ -103,7 +103,7 @@ const Register = () => {
     <Layout>
       <div className="flex flex-col items-center justify-center">
         <h3 className="mt-8 p-2 font-bold text-fuchsia-600 text-center">
-          Run2Win 4-week Starter Program Registration Form
+          Run2Win 30-day Endurance Challenge Registration Form
         </h3>
         <span className="mt-1 text-fuchsia-600">Contact Information</span>
         <div className="block mt-1 mb-6 p-6 rounded-lg shadow-sm bg-white max-w-sm">

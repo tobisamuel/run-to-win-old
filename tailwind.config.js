@@ -4,6 +4,17 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "2.5rem",
+        sm: "2.5rem",
+        md: "6rem",
+        lg: "6rem",
+        xl: "6rem",
+        "2xl": "6rem",
+      },
+    },
     extend: {
       colors: {
         "rtw-1": "#A904BF",

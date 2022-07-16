@@ -6,7 +6,7 @@ const details = {
   description:
     "Build cardiovascular strength, endurance and mental toughness in the 30-day challenge.",
   price: "3,000",
-  href: "/endurance-challenge/register",
+  href: "/programs/endurance-challenge/register",
   features: [
     "Free webinar on Mental Toughness",
     "Weekly no equipment bodyweight workout routine you can do anywhere (indoor or outdoor)",
