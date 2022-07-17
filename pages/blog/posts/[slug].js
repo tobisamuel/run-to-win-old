@@ -15,7 +15,7 @@ const Post = ({ post }) => {
         <span>{moment(post.createdAt).format("DD MMM, YYYY")}</span>
         <h1 className="text-3xl font-bold md:text-4xl">{post.title}</h1>
         <p className="mt-3">By {post.author.name}</p>
-        <div className="w-full h-48 relative overflow-hidden shadow-md rounded-lg mt-6 hover:bg-gray-100 md:h-96 md:mt-6">
+        <div className="w-full h-48 relative overflow-hidden shadow-md mt-6 hover:bg-gray-100 md:h-96 md:mt-6">
           <Image
             src={post.image.url}
             alt="picture"

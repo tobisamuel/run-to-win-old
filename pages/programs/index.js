@@ -46,11 +46,11 @@ const Programs = () => {
         <section>
           <div className="flex flex-col justify-between items-center md:flex-row">
             {/* left side */}
-            <div className="flex-1">
+            <div className="flex-1 flex justify-center">
               <Image
-                src="/images/hero.png"
-                width={600}
-                height={428}
+                src="/images/starter.png"
+                width={401}
+                height={600}
                 alt="Picture of woman holding weights"
               />
             </div>
@@ -77,7 +77,7 @@ const Programs = () => {
         </section>
 
         <section>
-          <div className="flex flex-col-reverse justify-between items-center md:flex-row-reverse">
+          <div className="flex flex-col justify-between items-center md:flex-row-reverse">
             {/* left side */}
             <div className="flex-1">
               <Image

@@ -11,7 +11,7 @@ export default function Layout({ children, pageMeta }) {
     description:
       "Run2Win Fitness and Wellness is an organisation that work with individuals and organisations in building habits for sustainable Fitness and Wellness through regular physical exercise and proper nutrition.",
     type: "website",
-    image: "https://run2winfitness.com/images/logo.png",
+    image: "https://run2winfitness.com/images/opg.png",
     ...pageMeta,
   };
 

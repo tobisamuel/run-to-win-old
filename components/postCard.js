@@ -5,7 +5,7 @@ import moment from "moment";
 const PostCard = ({ post }) => {
   return (
     <div>
-      <div className="w-full h-48 relative overflow-hidden shadow-md rounded-lg hover:bg-gray-100 md:h-72">
+      <div className="w-full h-48 relative overflow-hidden shadow-md hover:bg-gray-100 md:h-72">
         <Image
           src={post.image.url}
           alt="picture"

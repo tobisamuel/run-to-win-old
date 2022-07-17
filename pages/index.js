@@ -21,7 +21,7 @@ export default function Home() {
                 exercise and proper nutrition.
               </p>
               <div className="flex justify-center md:justify-start">
-                <Link href="/">
+                <Link href="/programs">
                   <a className="px-5 py-2 rounded-md inline-block text-center bg-fuchsia-600 font-medium text-white hover:bg-fuchsia-700">
                     Get Started
                   </a>
@@ -104,7 +104,7 @@ export default function Home() {
             Begin the journey to becoming the best version of you
           </h3>
           <div>
-            <Link href="/">
+            <Link href="/programs">
               <a className="mt-5 px-5 py-2 rounded-md inline-block text-center bg-white font-medium text-fuchsia-600 lg:mt-0">
                 Get Started
               </a>

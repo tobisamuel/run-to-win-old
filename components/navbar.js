@@ -45,7 +45,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`absolute left-0 right-0 top-0 min-h-screen mx-auto flex flex-col justify-between items-center bg-white transform ${
+        className={`absolute left-0 right-0 top-0 h-screen mx-auto flex flex-col justify-between items-center bg-white transform ${
           show ? "" : "-translate-y-full"
         } transition duration-200 ease-in-out z-50 md:hidden`}
       >
