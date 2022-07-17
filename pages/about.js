@@ -1,28 +1,14 @@
 import Image from "next/image";
 import { Layout } from "../components";
-
-const values = [
-  {
-    name: "Consistency",
-    description: `At Run2Win, we believe Consistency is the game changer and one of the most important elements in achieving our fitness goals. We are creatures of habit so the more we practice, the more natural it becomes.`,
-  },
-  {
-    name: "Focus",
-    description: `Life is full of distractions. Our ability to focus on the most important things of life without distractions is what makes the difference. At Run2Win, we ask our clients to identify the most important things of their lives and give them laser focus.`,
-  },
-  {
-    name: "Discipline",
-    description: `Discipline is foundationally important to achieving our life's goals and is therefore a critical factor for achieving our fitness goals. Discipline keeps us going and on track.`,
-  },
-  {
-    name: "Perseverance",
-    description: `The journey to Fitness and Wellness is a marathon NOT a sprint. Winning a marathon and getting to the finish line is for those with endurance; a never give up attitude; staying steady and resolute to the finish line.`,
-  },
-];
+import { values } from "../services/info";
 
 const AboutPage = () => {
+  const meta = {
+    title: "About | Run2Win Fitness",
+  };
+
   return (
-    <Layout>
+    <Layout pageMeta={meta}>
       <div className="px-10 md:px-24 space-y-12">
         <div className="flex flex-col items-center mt-12 mx-auto md:flex-row">
           {/* left side */}

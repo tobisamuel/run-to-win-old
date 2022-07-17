@@ -4,8 +4,12 @@ import { Card, Layout } from "../../components";
 import { cardInfo } from "../../services/info";
 
 const Programs = () => {
+  const meta = {
+    title: "Programs | Run2Win Fitness",
+  };
+
   return (
-    <Layout>
+    <Layout pageMeta={meta}>
       <div className="container mx-auto space-y-12">
         <section className="mt-12">
           <div className="flex flex-col-reverse items-center md:flex-row md:items-start">

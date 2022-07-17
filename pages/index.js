@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Card from "../components/card";
-import Layout from "../components/layout";
+import { Card, Layout } from "../components";
 import { cardInfo } from "../services/info";
 
 export default function Home() {

@@ -4,8 +4,13 @@ import { Layout } from "../../../components";
 import { getSlugs, getPost } from "../../../services";
 
 const Post = ({ post }) => {
+  const meta = {
+    title: `${post.title} | Run2Win Fitness`,
+    type: "blog",
+  };
+
   return (
-    <Layout>
+    <Layout pageMeta={meta}>
       <div className="container min-h-screen mx-auto mt-12 px-10 md:px-52">
         <span>{moment(post.createdAt).format("DD MMM, YYYY")}</span>
         <h1 className="text-3xl font-bold md:text-4xl">{post.title}</h1>

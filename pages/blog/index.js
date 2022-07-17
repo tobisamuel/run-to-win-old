@@ -12,8 +12,13 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts }) {
+  const meta = {
+    title: "Blog | Run2Win Fitness",
+    type: "blog",
+  };
+
   return (
-    <Layout>
+    <Layout pageMeta={meta}>
       <div className="container mx-auto px-10 md:px-24">
         <h1 className="my-12 text-center text-fuchsia-600 text-4xl font-bold md:text-5xl">
           <Link href="/blog">
