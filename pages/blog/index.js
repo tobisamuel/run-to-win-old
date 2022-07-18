@@ -3,15 +3,15 @@ import { FeaturedPostCard, Layout, PostCard } from "../../components";
 import { getPosts, getFeaturedPost } from "../../services/index";
 
 export async function getStaticProps() {
-  // const featuredPost = (await getFeaturedPost()) || [];
+  const featuredPost = (await getFeaturedPost()) || [];
   const posts = (await getPosts()) || [];
 
   return {
-    props: { posts },
+    props: { featuredPost, posts },
   };
 }
 
-export default function Home({ posts }) {
+export default function Home({ featuredPost, posts }) {
   const meta = {
     title: "Blog | Run2Win Fitness",
     type: "blog",
@@ -19,8 +19,8 @@ export default function Home({ posts }) {
 
   return (
     <Layout pageMeta={meta}>
-      <div className="container mx-auto px-10 md:px-24">
-        <h1 className="my-12 text-center text-fuchsia-600 text-4xl font-bold md:text-5xl">
+      <div className="container mx-auto my-12 px-10 space-y-12 md:px-24">
+        <h1 className="text-center text-fuchsia-600 text-4xl font-bold md:text-5xl">
           <Link href="/blog">
             <a>Run2Win Blog</a>
           </Link>
@@ -29,12 +29,10 @@ export default function Home({ posts }) {
         {/* Posts */}
         <div>
           {/* Featured Post */}
-          {/* {featuredPost.map((post) => (
-            <FeaturedPostCard key={post.title} post={post} />
-          ))} */}
+          <FeaturedPostCard post={featuredPost} />
 
           {/* Other Posts */}
-          <div className="grid grid-cols-1 gap-10 mt-10 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-12 mt-12 md:grid-cols-2 md:mt-24">
             {posts.map((post) => (
               <PostCard key={post.id} post={post} />
             ))}

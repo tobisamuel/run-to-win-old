@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import {
   FaBars,
   FaFacebook,
@@ -10,14 +11,15 @@ import {
 } from "react-icons/fa";
 
 const links = [
-  { title: "About", href: "/about" },
-  { title: "Programs", href: "/programs" },
-  { title: "Blog", href: "/blog" },
+  { title: "About", path: "/about" },
+  { title: "Programs", path: "/programs" },
+  { title: "Blog", path: "/blog" },
 ];
 
 const Navbar = () => {
-  const [show, setShow] = useState(false);
-  const toggleNav = () => setShow(!show);
+  const [navOpen, setNavOpen] = useState(false);
+  const toggleNav = () => setNavOpen(!navOpen);
+  const router = useRouter();
 
   return (
     <nav className="container py-8">
@@ -36,7 +38,7 @@ const Navbar = () => {
         {/* NavLinks */}
         <div className="hidden font-bold text-fuchsia-600 space-x-5 md:flex">
           {links.map((link) => (
-            <Link key={link.title} href={link.href}>
+            <Link key={link.title} href={link.path}>
               <a>{link.title}</a>
             </Link>
           ))}
@@ -45,27 +47,33 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`absolute left-0 right-0 top-0 h-screen mx-auto flex flex-col justify-between items-center bg-white transform ${
-          show ? "" : "-translate-y-full"
-        } transition duration-200 ease-in-out z-50 md:hidden`}
+        className={`fixed top-0 left-0 w-full h-screen mx-auto flex flex-col justify-between items-center bg-white transform delay-100 transition-all duration-300 ease-in-out z-50 ${
+          navOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
+        } md:hidden`}
       >
+        {/* Button */}
         <div
           className="container pt-11 flex justify-end text-2xl text-fuchsia-600"
           onClick={toggleNav}
         >
           <FaTimes />
         </div>
+
+        {/* Links */}
         <div className="flex flex-col space-y-6">
-          {links.map((link) => (
-            <Link key={link.title} href={link.href}>
-              <a
-                className="text-2xl text-fuchsia-600 font-bold"
+          <ul>
+            {links.map((link) => (
+              <li
+                key={link.title}
+                className="p-2 text-2xl text-fuchsia-600 font-bold hover:text-fuchsia-800"
                 onClick={toggleNav}
               >
-                {link.title}
-              </a>
-            </Link>
-          ))}
+                <Link href={link.path}>
+                  <a>{link.title}</a>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* Socials */}

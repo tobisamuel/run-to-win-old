@@ -7,7 +7,7 @@ export default function Layout({ children, pageMeta }) {
   const router = useRouter();
 
   const meta = {
-    title: "Run2Win Fitness",
+    title: "Run2Win Fitness and Wellness",
     description:
       "Run2Win Fitness and Wellness is an organisation that work with individuals and organisations in building habits for sustainable Fitness and Wellness through regular physical exercise and proper nutrition.",
     type: "website",

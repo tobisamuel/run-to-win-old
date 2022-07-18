@@ -5,7 +5,7 @@ const client = new GraphQLClient(graphqlApi);
 
 export const getSlugs = async () => {
   const query = gql`
-    query MyQuery {
+    query PostSlugs {
       posts {
         slug
       }
@@ -13,8 +13,9 @@ export const getSlugs = async () => {
   `;
 
   const result = await client.request(query);
+  const { posts } = result;
 
-  return result;
+  return posts;
 };
 
 export const getPosts = async () => {
@@ -85,39 +86,40 @@ export const getPost = async (slug) => {
 
 export const getFeaturedPost = async () => {
   const query = gql`
-    query MyQuery {
-      posts(where: { featuredPost: true }) {
-        author {
-          id
-          bio
-          name
-          image {
-            url
-          }
-        }
-        categories {
+    query FeaturedPost {
+      post(where: { slug: "my-fitness-story" }) {
+        id
+        createdAt
+        category {
           name
           slug
         }
-        createdAt
+        title
         excerpt
-        featuredImage {
+        content {
+          text
+        }
+        image {
           url
         }
+        author {
+          name
+          bio
+        }
         slug
-        title
       }
     }
   `;
 
   const result = await client.request(query);
+  const { post } = result;
 
-  return result.posts;
+  return post;
 };
 
 export const getRecentPosts = async () => {
   const query = gql`
-    query MyQuery {
+    query RecentPosts {
       posts(orderBy: createdAt_DESC, last: 3) {
         id
         title
@@ -131,13 +133,14 @@ export const getRecentPosts = async () => {
   `;
 
   const result = await client.request(query);
+  const { posts } = result;
 
-  return result.posts;
+  return posts;
 };
 
 export const getSimilarPosts = async () => {
   const query = gql`
-    query MyQuery($slug: String!, $categories: [String!]) {
+    query SimilarPosts($slug: String!, $categories: [String!]) {
       posts(
         where: {
           slug_not: $slug
@@ -157,20 +160,23 @@ export const getSimilarPosts = async () => {
   `;
 
   const result = await client.request(query);
+  const { posts } = result;
 
-  return result.posts;
+  return posts;
 };
 
 export const getCategories = async () => {
   const query = gql`
-    query MyQuery {
+    query Categories {
       categories {
         name
         slug
       }
     }
   `;
-  const result = await client.request(query);
 
-  return result.categories;
+  const result = await client.request(query);
+  const { categories } = result;
+
+  return categories;
 };

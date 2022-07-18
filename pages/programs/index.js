@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Card, Layout } from "../../components";
-import { cardInfo } from "../../services/info";
+import { Layout } from "../../components";
 
 const Programs = () => {
   const meta = {
@@ -12,7 +11,7 @@ const Programs = () => {
     <Layout pageMeta={meta}>
       <div className="container mx-auto space-y-12">
         <section className="mt-12">
-          <div className="flex flex-col-reverse items-center md:flex-row md:items-start">
+          <div className="flex flex-col-reverse items-center md:flex-row">
             {/* left side */}
             <div className="basis-1/2 flex flex-col mb-3 py-6 space-y-4 text-center md:text-left">
               <h1 className="text-3xl font-extrabold uppercase text-fuchsia-600 md:text-4xl lg:text-5xl">

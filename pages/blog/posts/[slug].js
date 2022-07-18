@@ -5,7 +5,7 @@ import { getSlugs, getPost } from "../../../services";
 
 const Post = ({ post }) => {
   const meta = {
-    title: `${post.title} | Run2Win Fitness`,
+    title: `${post.title} | Run2Win Blog`,
     type: "blog",
   };
 
@@ -23,7 +23,12 @@ const Post = ({ post }) => {
             objectFit="cover"
           />
         </div>
-        <p className="mt-6 md:text-lg md:mt-12">{post.content.text}</p>
+        <div className="grid grid-cols-12">
+          <p className="mt-6 col-span-12 md:col-span-9 md:text-lg md:mt-12">
+            {post.content.text}
+          </p>
+          <div></div>
+        </div>
       </div>
     </Layout>
   );
@@ -42,8 +47,8 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const data = await getSlugs();
-  const paths = data.posts.map((post) => ({ params: { slug: post.slug } }));
+  const posts = await getSlugs();
+  const paths = posts.map((post) => ({ params: { slug: post.slug } }));
 
   return {
     paths: paths,
