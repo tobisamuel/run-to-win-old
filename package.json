@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@graphcms/rich-text-react-renderer": "^0.6.1",
     "firebase": "^9.6.11",
     "formik": "^2.2.9",
     "graphql-request": "^4.3.0",

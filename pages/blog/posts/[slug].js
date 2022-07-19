@@ -1,5 +1,6 @@
 import Image from "next/image";
 import moment from "moment";
+import { RichText } from "@graphcms/rich-text-react-renderer";
 import { Layout } from "../../../components";
 import { getSlugs, getPost } from "../../../services";
 
@@ -9,13 +10,28 @@ const Post = ({ post }) => {
     type: "blog",
   };
 
+  const renderers = {
+    h1: ({ children }) => <h1 className="text-3xl my-5">{children}</h1>,
+    bold: ({ children }) => <strong>{children}</strong>,
+    p: ({ children }) => <p className="mb-8">{children}</p>,
+  };
+
   return (
     <Layout pageMeta={meta}>
       <div className="container min-h-screen mx-auto mt-12 px-10 md:px-52">
-        <span>{moment(post.createdAt).format("DD MMM, YYYY")}</span>
-        <h1 className="text-3xl font-bold md:text-4xl">{post.title}</h1>
-        <p className="mt-3">By {post.author.name}</p>
-        <div className="w-full h-48 relative overflow-hidden shadow-md mt-6 hover:bg-gray-100 md:h-96 md:mt-6">
+        <div className="space-y-2">
+          <div className="w-fit px-2 py-1 bg-fuchsia-100 text-sm text-fuchsia-700 font-medium rounded-sm">
+            {post.category.name}
+          </div>
+          <h1 className="text-3xl font-bold md:text-4xl">{post.title}</h1>
+          <div className="flex justify-between items-center">
+            <p>By {post.author.name}</p>
+            <span className="text-sm">
+              {moment(post.createdAt).format("DD MMM, YYYY")}
+            </span>
+          </div>
+        </div>
+        <div className="w-full h-48 relative overflow-hidden shadow-md my-6 hover:bg-gray-100 md:h-96 md:my-6">
           <Image
             src={post.image.url}
             alt="picture"
@@ -23,11 +39,12 @@ const Post = ({ post }) => {
             objectFit="cover"
           />
         </div>
-        <div className="grid grid-cols-12">
-          <p className="mt-6 col-span-12 md:col-span-9 md:text-lg md:mt-12">
-            {post.content.text}
-          </p>
-          <div></div>
+        <div>
+          <RichText content={post.content.raw.children} renderers={renderers} />
+        </div>
+        <div className="py-3 border-t-2">
+          <span>Written by</span>
+          <p className="text-xl font-semibold">{post.author.name}</p>
         </div>
       </div>
     </Layout>

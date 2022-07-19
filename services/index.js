@@ -30,9 +30,6 @@ export const getPosts = async () => {
         }
         title
         excerpt
-        content {
-          text
-        }
         image {
           url
         }
@@ -64,7 +61,7 @@ export const getPost = async (slug) => {
         title
         excerpt
         content {
-          text
+          raw
         }
         image {
           url
@@ -96,9 +93,6 @@ export const getFeaturedPost = async () => {
         }
         title
         excerpt
-        content {
-          text
-        }
         image {
           url
         }
