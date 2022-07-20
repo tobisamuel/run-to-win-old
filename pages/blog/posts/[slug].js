@@ -12,8 +12,11 @@ const Post = ({ post }) => {
 
   const renderers = {
     h1: ({ children }) => <h1 className="text-3xl my-5">{children}</h1>,
+    h2: ({ children }) => (
+      <h2 className="text-2xl font-semibold my-5">{children}</h2>
+    ),
     bold: ({ children }) => <strong>{children}</strong>,
-    p: ({ children }) => <p className="mb-8">{children}</p>,
+    p: ({ children }) => <p className="mb-6">{children}</p>,
   };
 
   return (
