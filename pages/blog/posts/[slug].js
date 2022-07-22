@@ -31,7 +31,7 @@ const Post = ({ post }) => {
 
   return (
     <Layout pageMeta={meta}>
-      <div className="container min-h-screen mx-auto mt-12 px-4 md:px-52">
+      <div className="container min-h-screen mx-auto mt-12 px-4 md:px-28 lg:px-52">
         <div className="space-y-2">
           <div className="w-fit px-2 py-1 bg-fuchsia-100 text-sm text-fuchsia-700 font-medium rounded-sm">
             {post.category.name}
@@ -55,9 +55,20 @@ const Post = ({ post }) => {
         <div>
           <RichText content={post.content.raw.children} renderers={renderers} />
         </div>
-        <div className="py-3 border-t-2">
-          <span>Written by</span>
-          <p className="text-xl font-semibold">{post.author.name}</p>
+        <div className="flex mt-6 pt-5 border-t-2">
+          <div className="w-28 relative rounded-full overflow-hidden hidden md:block">
+            <Image
+              src={post.author.image.url}
+              alt="text"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+          <div className="md:ml-3">
+            <span>Written by</span>
+            <p className="text-xl font-semibold">{post.author.name}</p>
+            <p className="">{post.author.bio}</p>
+          </div>
         </div>
       </div>
     </Layout>

@@ -69,6 +69,9 @@ export const getPost = async (slug) => {
         author {
           name
           bio
+          image {
+            url
+          }
         }
         slug
       }
