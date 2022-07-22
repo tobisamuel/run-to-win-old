@@ -16,12 +16,21 @@ const Post = ({ post }) => {
       <h2 className="text-2xl font-semibold my-5">{children}</h2>
     ),
     bold: ({ children }) => <strong>{children}</strong>,
-    p: ({ children }) => <p className="mb-6">{children}</p>,
+    p: ({ children }) => <p className="mb-3">{children}</p>,
+    img: ({ src, altText, height, width }) => (
+      <Image
+        src={src}
+        alt={altText}
+        height={height}
+        width={width}
+        objectFit="cover"
+      />
+    ),
   };
 
   return (
     <Layout pageMeta={meta}>
-      <div className="container min-h-screen mx-auto mt-12 px-10 md:px-52">
+      <div className="container min-h-screen mx-auto mt-12 px-4 md:px-52">
         <div className="space-y-2">
           <div className="w-fit px-2 py-1 bg-fuchsia-100 text-sm text-fuchsia-700 font-medium rounded-sm">
             {post.category.name}
