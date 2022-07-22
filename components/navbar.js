@@ -53,7 +53,7 @@ const Navbar = () => {
       >
         {/* Button */}
         <div
-          className="container pt-11 flex justify-end text-2xl text-fuchsia-600"
+          className="container mt-10 flex justify-end text-2xl text-fuchsia-600"
           onClick={toggleNav}
         >
           <FaTimes />

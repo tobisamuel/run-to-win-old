@@ -9,7 +9,7 @@ const AboutPage = () => {
 
   return (
     <Layout pageMeta={meta}>
-      <div className="px-10 md:px-24 space-y-12">
+      <div className="container mx-auto space-y-12">
         <div className="flex flex-col items-center mt-12 mx-auto md:flex-row">
           {/* left side */}
           <div className="basis-1/2 flex flex-col space-y-4 mb-3 text-center md:text-left">
@@ -31,7 +31,7 @@ const AboutPage = () => {
         </div>
 
         {/* Values Section */}
-        <div className="">
+        <div>
           <div className="mx-auto">
             <h2 className="text-2xl text-center text-fuchsia-600 font-extrabold leading-8 tracking-wide uppercase">
               OUR VALUES

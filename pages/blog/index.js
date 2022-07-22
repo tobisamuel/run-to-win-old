@@ -19,7 +19,7 @@ export default function Home({ featuredPost, posts }) {
 
   return (
     <Layout pageMeta={meta}>
-      <div className="container mx-auto my-12 px-10 space-y-12 md:px-24">
+      <div className="container mx-auto my-12 px-4 space-y-12 md:px-24">
         <h1 className="text-center text-fuchsia-600 text-4xl font-bold md:text-5xl">
           <Link href="/blog">
             <a>Run2Win Blog</a>
