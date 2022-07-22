@@ -17,7 +17,7 @@ const Post = ({ post }) => {
       <h2 className="text-2xl font-semibold my-5">{children}</h2>
     ),
     bold: ({ children }) => <strong>{children}</strong>,
-    p: ({ children }) => <p className="mb-3">{children}</p>,
+    p: ({ children }) => <p className="mb-3 lg:text-lg">{children}</p>,
     img: ({ src, altText, height, width }) => (
       <Image
         src={src}

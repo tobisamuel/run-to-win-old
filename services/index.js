@@ -21,7 +21,7 @@ export const getSlugs = async () => {
 export const getPosts = async () => {
   const query = gql`
     query MyQuery {
-      posts {
+      posts(orderBy: createdAt_DESC) {
         id
         createdAt
         category {
