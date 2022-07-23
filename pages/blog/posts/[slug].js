@@ -6,7 +6,8 @@ import { getSlugs, getPost } from "../../../services";
 
 const Post = ({ post }) => {
   const meta = {
-    image: `${post.image.url}`,
+    description: post.excerpt,
+    image: post.image.url,
     title: `${post.title} | Run2Win Blog`,
     type: "blog",
   };
