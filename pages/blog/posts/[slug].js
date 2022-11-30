@@ -19,6 +19,7 @@ const Post = ({ post }) => {
     ),
     bold: ({ children }) => <strong>{children}</strong>,
     p: ({ children }) => <p className="mb-3 lg:text-lg">{children}</p>,
+    ul: ({ children }) => <ul className="list-disc">{children}</ul>,
     ol: ({ children }) => <ol className="list-decimal">{children}</ol>,
     img: ({ src, altText, height, width }) => (
       <Image
@@ -41,9 +42,6 @@ const Post = ({ post }) => {
           <h1 className="text-3xl font-bold md:text-4xl">{post.title}</h1>
           <div className="flex justify-between items-center">
             <p>By {post.author.name}</p>
-            {/* <span className="text-sm">
-              {moment(post.createdAt).format("DD MMM, YYYY")}
-            </span> */}
             <span className="text-sm">
               {moment(post.updatedAt).format("DD MMM, YYYY")}
             </span>
