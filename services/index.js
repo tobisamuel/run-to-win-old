@@ -54,6 +54,7 @@ export const getPost = async (slug) => {
       post(where: { slug: $slug }) {
         id
         createdAt
+        updatedAt
         category {
           name
           slug
