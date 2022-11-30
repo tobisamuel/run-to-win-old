@@ -19,8 +19,12 @@ const Post = ({ post }) => {
     ),
     bold: ({ children }) => <strong>{children}</strong>,
     p: ({ children }) => <p className="mb-3 lg:text-lg">{children}</p>,
-    ul: ({ children }) => <ul className="list-disc">{children}</ul>,
-    ol: ({ children }) => <ol className="list-decimal">{children}</ol>,
+    ul: ({ children }) => (
+      <ul className="ml-5 list-disc lg:text-lg">{children}</ul>
+    ),
+    ol: ({ children }) => (
+      <ol className="list-decimal lg:text-lg">{children}</ol>
+    ),
     img: ({ src, altText, height, width }) => (
       <Image
         src={src}
