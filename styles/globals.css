@@ -2,19 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@font-face {
+  font-family: "Gara";
+  src: url("/fonts/gara.ttf");
+  font-weight: 400;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@font-face {
+  font-family: "Gara";
+  src: url("/fonts/gara-italic.ttf");
+  font-weight: 400;
+  font-style: italic;
 }
 
-* {
-  box-sizing: border-box;
+@font-face {
+  font-family: "Gara";
+  src: url("/fonts/gara-bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Yapari";
+  src: url("/fonts/Yapari-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Yapari";
+  src: url("/fonts/Yapari-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Yapari";
+  src: url("/fonts/Yapari-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Yapari";
+  src: url("/fonts/Yapari-ExtraBold.ttf");
+  font-weight: 800;
 }

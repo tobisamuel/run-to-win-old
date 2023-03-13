@@ -22,6 +22,12 @@ module.exports = {
         "rtw-3": "#ECBBF2",
         "rtw-4": "#261B14",
         "rtw-5": "#F2F2F2",
+        book: "#FF7D63",
+        book2: "#F5F3F8",
+      },
+      fontFamily: {
+        gara: ["Gara", "sans-serif"],
+        yapari: ["Yapari", "sans-serif"],
       },
     },
   },
