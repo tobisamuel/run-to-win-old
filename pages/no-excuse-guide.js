@@ -21,7 +21,9 @@ export default function NoExcuse() {
 
               <div className="mt-4 hidden lg:flex">
                 <a
-                  href="#get-refactoring-ui"
+                  href="https://selar.co/b332"
+                  rel="noreferrer noopener"
+                  target="_blank"
                   className="bg-book py-2 px-6 font-semibold text-white focus:outline-none focus:ring-2 focus:ring-book2 focus:ring-offset-2 focus:ring-offset-book2"
                 >
                   Buy the book
