@@ -19,7 +19,14 @@ export default function NoExcuse() {
                 habits for sustainable fitness and wellness
               </p>
 
-              <div className="mt-4 hidden lg:flex">
+              <div className="mt-4 hidden lg:flex lg:gap-2">
+                <a
+                  href="#"
+                  className="border-2 border-book py-2 px-6 font-semibold text-book focus:outline-none focus:ring-2 focus:ring-book2 focus:ring-offset-2 focus:ring-offset-book2"
+                >
+                  Learn More
+                </a>
+
                 <a
                   href="https://selar.co/b332"
                   rel="noreferrer noopener"
@@ -37,21 +44,26 @@ export default function NoExcuse() {
                   src="/images/book.jpeg"
                   alt="No excuse guide"
                   layout="fill"
+                  priority
                   className="object-fill"
                 />
               </div>
-              <div className="relative mt-16 flex flex-col sm:flex-row sm:justify-center lg:hidden">
-                <button
-                  type="button"
-                  className="rounded-full bg-sky-300 py-2 px-6 text-center font-semibold text-slate-900 hover:bg-sky-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-900"
-                >
-                  Get two free chapters
-                </button>
+
+              <div className="relative mt-16 flex flex-col gap-2 sm:flex-row sm:justify-center lg:hidden">
                 <a
-                  href="#get-refactoring-ui"
-                  className="mt-6 rounded-full border border-white/10 bg-slate-700/40 py-2 px-6 text-center font-semibold text-white hover:border-white/20 hover:bg-slate-700/60 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-900 sm:ml-6 sm:mt-0"
+                  href="#"
+                  className="border-2 border-book py-2 px-6 font-semibold text-book focus:outline-none focus:ring-2 focus:ring-book2 focus:ring-offset-2 focus:ring-offset-book2"
                 >
-                  Buy now
+                  Learn More
+                </a>
+
+                <a
+                  href="https://selar.co/b332"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                  className="bg-book py-2 px-6 font-semibold text-white focus:outline-none focus:ring-2 focus:ring-book2 focus:ring-offset-2 focus:ring-offset-book2"
+                >
+                  Buy the book
                 </a>
               </div>
             </div>
