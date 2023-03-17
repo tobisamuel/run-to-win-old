@@ -6,7 +6,7 @@ export default function NoExcuse() {
   return (
     <>
       <section className="bg-book2">
-        <div className="mx-auto px-4 pt-24 sm:px-6 md:max-w-2xl md:px-4 lg:max-w-7xl lg:px-0 lg:pt-48 lg:pb-48">
+        <div className="mx-auto px-4 py-24 sm:px-6 md:max-w-2xl md:px-4 lg:max-w-7xl lg:px-0 lg:pt-48 lg:pb-48">
           <div className="lg:flex">
             <div className="flex-auto">
               <h1 className="text-center font-yapari text-4xl font-semibold uppercase leading-[1.2] text-book md:text-[4rem] md:leading-[4.75rem] lg:text-left lg:text-5xl">
